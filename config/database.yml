@@ -1,0 +1,18 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  database: delivery
+  username: delivery_user
+  password: delivery
+  port: 5432
+  host: database
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+
+development:
+  <<: *default
+
+test:
+  <<: *default
+
+production:
+  <<: *default
