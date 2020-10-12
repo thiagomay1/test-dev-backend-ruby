@@ -41,7 +41,7 @@ ActiveRecord::Schema.define(version: 2020_10_11_162237) do
 
   create_table "orders", force: :cascade do |t|
     t.bigint "external_id"
-    t.integer "external_store_ind"
+    t.integer "external_store_id"
     t.datetime "date_created"
     t.datetime "date_closed"
     t.datetime "last_updated"
@@ -67,7 +67,7 @@ ActiveRecord::Schema.define(version: 2020_10_11_162237) do
     t.string "payment_type"
     t.string "status"
     t.decimal "transaction_amount"
-    t.integer "taxes_amout"
+    t.integer "taxes_amount"
     t.decimal "shipping_cost"
     t.decimal "total_paid_amount"
     t.decimal "installment_amount"

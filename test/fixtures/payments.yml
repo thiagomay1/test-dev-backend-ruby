@@ -8,7 +8,7 @@ one:
   payment_type: MyString
   status: MyString
   transaction_amount: 9.99
-  taxes_amout: 1
+  taxes_amount: 1
   shipping_cost: 9.99
   total_paid_amount: 9.99
   installment_amount: 9.99
@@ -24,7 +24,7 @@ two:
   payment_type: MyString
   status: MyString
   transaction_amount: 9.99
-  taxes_amout: 1
+  taxes_amount: 1
   shipping_cost: 9.99
   total_paid_amount: 9.99
   installment_amount: 9.99

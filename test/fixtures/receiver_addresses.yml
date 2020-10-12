@@ -1,7 +1,7 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  external_id: 
+  external_id: 94128941284
   address_line: MyString
   street_name: MyString
   street_number: MyString
@@ -17,7 +17,7 @@ one:
   receiver_phone: MyString
 
 two:
-  external_id: 
+  external_id: 1829412
   address_line: MyString
   street_name: MyString
   street_number: MyString

@@ -8,7 +8,7 @@ class CreatePayments < ActiveRecord::Migration[6.0]
       t.string :payment_type
       t.string :status
       t.decimal :transaction_amount
-      t.integer :taxes_amout
+      t.integer :taxes_amount
       t.decimal :shipping_cost
       t.decimal :total_paid_amount
       t.decimal :installment_amount
@@ -20,3 +20,4 @@ class CreatePayments < ActiveRecord::Migration[6.0]
     end
   end
 end
+

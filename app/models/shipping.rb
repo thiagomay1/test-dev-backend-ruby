@@ -1,3 +1,3 @@
 class Shipping < ApplicationRecord
-  has_one :receiver_address
+  belongs_to :receiver_address
 end

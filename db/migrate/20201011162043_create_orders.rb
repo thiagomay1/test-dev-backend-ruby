@@ -2,7 +2,7 @@ class CreateOrders < ActiveRecord::Migration[6.0]
   def change
     create_table :orders do |t|
       t.bigint :external_id
-      t.integer :external_store_ind
+      t.integer :external_store_id
       t.datetime :date_created
       t.datetime :date_closed
       t.datetime :last_updated
