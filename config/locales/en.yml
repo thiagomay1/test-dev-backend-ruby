@@ -31,3 +31,8 @@
 
 en:
   hello: "Hello world"
+  activerecord:
+        attributes:
+                order:
+                        external_id: "Id"
+                        external_store_id: "Store Id"
