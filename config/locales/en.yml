@@ -36,3 +36,6 @@ en:
                 order:
                         external_id: "Id"
                         external_store_id: "Store Id"
+                order_item:
+                        external_item_id: "Item Id"
+
