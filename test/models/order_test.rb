@@ -72,7 +72,7 @@ class OrderTest < ActiveSupport::TestCase
    def build_order
      buyer = Buyer.new
      shipping = Shipping.new
-     payment = Payment.new
+     payment = Payment.new(payment_type: "teste", total_paid_amount: 142)
      order_item = OrderItem.new(external_item_id: "IT4801901403", item_title: "Produto de Testes", quantity: 1, unit_price: 49.9, full_unit_price: 49.9)
      Order.new(external_id: 123412, external_store_id: 1243, date_created: Time.now, total_amount: 49.9, total_shipping: 5.14, paid_amount: 55.04, payment: [payment], order_item: [order_item], buyer: buyer, shipping: shipping)
    end
