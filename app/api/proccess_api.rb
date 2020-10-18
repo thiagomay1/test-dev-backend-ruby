@@ -1,10 +1,11 @@
 require 'net/http'
 
 class ProccessApi
+  PROCCESS_API_URL = 'https://delivery-center-recruitment-ap.herokuapp.com/'
 
   def send(payload, now)
     Rails.logger.info "Proccessing order #{payload[:externalCode]}..."
-    uri = URI.parse('https://delivery-center-recruitment-ap.herokuapp.com/')
+    uri = URI.parse(PROCCESS_API_URL)
     headers = {"Content-Type": "application/json" }
     if now.present?
       now_formated = now.strftime("%Hh%M - %d/%m/%y")

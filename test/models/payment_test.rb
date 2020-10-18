@@ -3,8 +3,6 @@ require 'test_helper'
 class PaymentTest < ActiveSupport::TestCase
   test "payment should be valid" do
     payment = build_payment
-    puts payment.valid?
-    puts payment.errors.full_messages
     assert payment.valid?
   end
 

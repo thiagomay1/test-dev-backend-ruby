@@ -1,5 +1,5 @@
 class ProccessResult
-  attr_reader :message
+  attr_reader :message, :status
 
   def initialize(status, message)
     @status = status

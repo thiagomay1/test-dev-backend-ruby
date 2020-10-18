@@ -38,9 +38,9 @@ class OrderTest < ActiveSupport::TestCase
      assert order.invalid?
    end
 
-   test "paid_amount should not be empty" do
+   test "total_amount_with_shipping should not be empty" do
      order = build_order
-     order.paid_amount = nil
+     order.total_amount_with_shipping = nil
      assert order.invalid?
    end
 
@@ -74,6 +74,6 @@ class OrderTest < ActiveSupport::TestCase
      shipping = Shipping.new
      payment = Payment.new(payment_type: "teste", total_paid_amount: 142)
      order_item = OrderItem.new(external_item_id: "IT4801901403", item_title: "Produto de Testes", quantity: 1, unit_price: 49.9, full_unit_price: 49.9)
-     Order.new(external_id: 123412, external_store_id: 1243, date_created: Time.now, total_amount: 49.9, total_shipping: 5.14, paid_amount: 55.04, payment: [payment], order_item: [order_item], buyer: buyer, shipping: shipping)
+     Order.new(external_id: 123412, external_store_id: 1243, date_created: Time.now, total_amount: 49.9, total_shipping: 5.14, total_amount_with_shipping: 55.04, payment: [payment], order_item: [order_item], buyer: buyer, shipping: shipping)
    end
 end

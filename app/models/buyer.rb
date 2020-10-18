@@ -13,4 +13,11 @@ class Buyer < ApplicationRecord
        errors.add(:phone, "Area Code can't be blank")
     end
   end
+  def full_name
+    "#{first_name} #{last_name}"
+  end
+
+  def contact
+    "#{phone['area_code']}#{phone['number']}"
+  end
 end
