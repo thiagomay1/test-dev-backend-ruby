@@ -1,13 +1,13 @@
 class ProccessResult
-  attr_reader :message, :status
+  attr_reader :message, :code
 
   def initialize(status, message)
-    @status = status
+    @code = status
     @message = message
   end
 
   def is_success
-    @status >= 200 && @status < 300
+    @code >= 200 && @code < 300
   end
 
 end

@@ -1,7 +1,8 @@
 require 'net/http'
 
 class ProccessApi
-  PROCCESS_API_URL = 'https://delivery-center-recruitment-ap.herokuapp.com/'
+  #PROCCESS_API_URL = 'https://delivery-center-recruitment-ap.herokuapp.com/'
+  PROCCESS_API_URL = ENV['PROCCESS_API_URL']
 
   def send(payload, now)
     Rails.logger.info "Proccessing order #{payload[:externalCode]}..."
@@ -13,7 +14,11 @@ class ProccessApi
     end
     json = payload.to_json
     response = Net::HTTP::post(uri, json, headers)
+    puts '------------------------------'
+    puts json
+    puts '------------------------------'
     Rails.logger.info "Order #{payload[:externalCode]} proccessed with status=#{response.code}"
-    ProccessResult.new(response.code.to_i, response.message)
+    puts response.inspect
+    ProccessResult.new(response.code.to_i, response.body)
   end
 end

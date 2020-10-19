@@ -13,8 +13,9 @@ module Api
           render json: order.errors.full_messages
         end
         request = @adapter.adapt(order)
-        result = @proccess_api.send(request)
-        render json: result.message.to_json, status: result.code
+        now = Time.now.utc
+        result = @proccess_api.send(request, now)
+        render json: result.message.to_json, status: result.code 
       end
     end
   end
