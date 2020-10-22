@@ -1,0 +1,19 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  external_id: 9481241241
+  nickname: MyString
+  email: MyString
+  first_name: MyString
+  last_name: MyString
+  phone: {area_code: 41, number: "9999999"}
+  billing_info: {doc_type: "CPF", doc_number: "9999999999"}
+
+two:
+  external_id: 948124124
+  nickname: MyString
+  email: MyString
+  first_name: MyString
+  last_name: MyString
+  phone: {area_code: 41, number: "9999999"}
+  billing_info: {doc_type: "CPF", doc_number: "9999999999"}
