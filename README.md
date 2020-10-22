@@ -109,4 +109,4 @@ Ao enviar os dados para a API de processamento, estava retornando um erro de um 
 "[total_shipping] are required"
 ```
 
-Tempo de contato com Ruby: 2 semanas.
+Nas duas semanas que tive contato com Ruby, foquei em utilizar TDD para testar todas as unidades do sistema, que me deu mais agilidade e segurança para conhecer melhor a linguagem/Framework
