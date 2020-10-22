@@ -1,7 +1,6 @@
 require 'net/http'
 
 class ProccessApi
-  #PROCCESS_API_URL = 'https://delivery-center-recruitment-ap.herokuapp.com/'
   PROCCESS_API_URL = ENV['PROCCESS_API_URL']
 
   def send(payload, now)

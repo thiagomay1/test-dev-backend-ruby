@@ -9,10 +9,11 @@ module Api
 
       def create
         order = @order_mapper.map_order(params)
-        if !order.save
+        if order.invalid?
           render json: order.errors.full_messages
           return
         end
+        order.save
         request = @adapter.adapt(order)
         now = Time.now.utc
         result = @proccess_api.send(request, now)
