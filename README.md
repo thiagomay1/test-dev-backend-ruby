@@ -7,6 +7,8 @@ docker-compose up -d
 docker-compose run web rails db:setup db:migrate
 ```
 
+Healthcheck: http://localhost:3000/healthcheck
+
 ## Como chamar
 ```http 
 POST /api/v1/order HTTP/1.1
