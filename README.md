@@ -109,4 +109,3 @@ Ao enviar os dados para a API de processamento, estava retornando um erro de um 
 ```
 
 Tempo de contato com Ruby: 2 semanas.
-
