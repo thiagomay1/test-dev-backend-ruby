@@ -7,14 +7,13 @@ docker-compose up -d
 docker-compose run web rails db:setup db:migrate
 ```
 
+
+# Como chamar
 Healthcheck: http://localhost:3000/healthcheck
-
-## Como chamar
-```http 
-POST /api/v1/order HTTP/1.1
-Host: localhost:3000
-Content-Type: application/json
-
+<p>
+Processamento: http://localhost:3000/api/v1/order
+  
+```json
 {
   "id": 9987071,
   "store_id": 282,
