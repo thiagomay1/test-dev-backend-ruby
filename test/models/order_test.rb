@@ -70,8 +70,11 @@ class OrderTest < ActiveSupport::TestCase
 
    private
    def build_order
-     buyer = Buyer.new
-     shipping = Shipping.new
+
+     phone = {area_code: 41, number: "99999999"}
+     buyer = Buyer.new(external_id: 129421, first_name: "John", last_name: "Doe", phone: phone)
+     receiver_address = ReceiverAddress.new(street_name: "Rua fake de testes", street_number: "3453", comment: "teste", zip_code: "85045020", city: "city fake", state:"state fake", country_cod:"CF", neighborhood: "vila de testes", latitude: -23.629037, longitude: -46.712689)
+     shipping = Shipping.new(receiver_address: receiver_address)
      payment = Payment.new(payment_type: "teste", total_paid_amount: 142)
      order_item = OrderItem.new(external_item_id: "IT4801901403", item_title: "Produto de Testes", quantity: 1, unit_price: 49.9, full_unit_price: 49.9)
      Order.new(external_id: 123412, external_store_id: 1243, date_created: Time.now, total_amount: 49.9, total_shipping: 5.14, total_amount_with_shipping: 55.04, payment: [payment], order_item: [order_item], buyer: buyer, shipping: shipping)

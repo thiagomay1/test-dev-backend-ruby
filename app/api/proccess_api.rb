@@ -14,11 +14,7 @@ class ProccessApi
     end
     json = payload.to_json
     response = Net::HTTP::post(uri, json, headers)
-    puts '------------------------------'
-    puts json
-    puts '------------------------------'
     Rails.logger.info "Order #{payload[:externalCode]} proccessed with status=#{response.code}"
-    puts response.inspect
     ProccessResult.new(response.code.to_i, response.body)
   end
 end

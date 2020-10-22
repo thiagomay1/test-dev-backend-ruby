@@ -11,6 +11,7 @@ module Api
         order = @order_mapper.map_order(params)
         if !order.save
           render json: order.errors.full_messages
+          return
         end
         request = @adapter.adapt(order)
         now = Time.now.utc

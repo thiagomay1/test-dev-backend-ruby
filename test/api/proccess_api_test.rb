@@ -22,7 +22,7 @@ class ProccessApiTest < ActiveSupport::TestCase
      payload = mock_json
      stub_post = stub_request(:post, 'https://delivery-center-recruitment-ap.herokuapp.com/')
        .with(body: payload, headers: {"Content-Type": 'application/json' })
-       .to_return(status: [500, "Internal Server Error"])
+       .to_return(status: [500], body: "Internal Server Error")
 
      result = service.send(payload, nil)
 
