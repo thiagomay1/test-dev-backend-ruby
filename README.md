@@ -10,7 +10,7 @@ docker-compose run web rails db:setup db:migrate
 
 # Como chamar
 Healthcheck: http://localhost:3000/healthcheck
-<p>
+</br>
 Processamento: http://localhost:3000/api/v1/order
   
 ```json
